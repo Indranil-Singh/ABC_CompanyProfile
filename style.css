@@ -358,3 +358,109 @@ body {
   color: white;
   border: 0;
 }
+
+/* Style for news section */
+
+.news-container{
+  max-width: 3000px;
+  margin: 0 auto; /* To centre the container horizontally */
+  padding: 20px;
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+
+}
+
+.news-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news {
+  width: calc(33.33% - 20px);
+  padding: 108px;
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Remove underlines from links */
+  color: #333; /* Text color for links */
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.news:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+/* Set background images for each project */
+#news1 {
+  background-image: url('news1.jpg'); /* Replace 'agile.jpg' with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color:  #fff; /* Change text color for visibility on the image */
+}
+
+#news2 {
+  background-image: url('news2.jpg'); /* Replace 'java.jpg' with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Change text color for visibility on the image */
+}
+
+#news3 {
+  background-image: url('news3.jpg'); /* Replace 'web-development.jpg' with your image path */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#news4 {
+  background-image: url('news4.jpg'); /* Replace 'web-development.jpg' with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Change text color for visibility on the image */
+}
+
+
+
+/* Define the animation */
+@keyframes runningColors {
+  0% {
+    background-image: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000);
+    background-size: 200% auto;
+    background-position: 100% 0;
+  }
+  100% {
+    background-image: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000);
+    background-size: 200% auto;
+    background-position: -100% 0;
+  }
+}
+
+.projects-headline {
+  text-align: center; /* Center the text horizontally */
+  margin-top: 0; /* Push the headline to the top of the container */
+  padding-top: 0px; /* Add some padding at the top for spacing */
+  font-size: 31px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the headline bold */
+}
+
+.news-headline {
+  text-align: center; /* Center the text horizontally */
+  margin-top: 0; /* Push the headline to the top of the container */
+  padding-top: 0px; /* Add some padding at the top for spacing */
+  font-size: 31px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the headline bold */
+  animation: runningColors 3s linear infinite;
+  background-clip: text;
+}
