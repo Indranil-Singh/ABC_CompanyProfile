@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 130px;
-    z-index: 100; 
+    z-index: 1000; 
     align-items: center;
     background-color: rgb(10, 153, 158);
   }
@@ -73,6 +73,8 @@ header {
   position: fixed;
   top: -20px;
   right: -150px;
+  opacity: 2;
+  z-index: 500;
   
   }
   
@@ -128,10 +130,6 @@ header {
   ul li:hover ul.dropdown{
     display: block;
   }
-  /* ul li ul li ul.dropdown-new:hover{
-    color: red;
-    display: block;
-  } */
 
 
   /* Style for the navigation bar links on hover */
@@ -140,19 +138,6 @@ header {
    text-decoration: underline;
 }
 
-
-
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-} */
-
-/* header {
-  text-align: center;
-  padding: 50px;
-} */
 
 .blink {
   animation: blink 5.0s   ; /* Use the "blink" animation with infinite repetition */
@@ -188,12 +173,14 @@ header {
   margin-top: 25px;
 }
 .row{
-  /* width: 180%; */
+  top: -65px;
+  margin: 0px;
   max-width: 2000px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   display: flex;
+  position: relative;
   /* align-items: center; */
 }
 .row .info .contain{
@@ -246,6 +233,8 @@ body {
 /* Style for project container and projects */
 
 .project-container{
+  position: relative;
+  top: -56px;
   max-width: 2000px;
   margin: 0 auto; /* To centre the container horizontally */
   padding: 20px;
@@ -362,6 +351,8 @@ body {
 /* Style for news section */
 
 .news-container{
+  position: relative;
+  top: -48px;
   max-width: 3000px;
   margin: 0 auto; /* To centre the container horizontally */
   padding: 20px;
@@ -463,4 +454,306 @@ body {
   font-weight: bold; /* Make the headline bold */
   animation: runningColors 3s linear infinite;
   background-clip: text;
+}
+
+/* Style for footer section contact us */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  resize: vertical;
+}
+
+input[type=submit] {
+
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+
+.footer-container {
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  background-image: url(contact_us_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+}
+
+.footer-container p {
+  color: blue; /* Change this to the desired color */
+ /* text-align: justify; */
+}
+
+.footer-container h2 {
+
+  text-align: left;
+  padding-left: 470px;
+}
+
+/* Create two columns that float next to eachother */
+
+.column {
+
+  float: left;
+  width: 30%;
+  margin-top: -20px;
+  padding: 30px;
+}
+
+/* Clear floats after the columns */
+
+.row-com:after {
+
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+
+  .column, input[type=submit] {
+    width: 10%;
+    margin-top: 0;
+  }
+}
+
+/* Style for the thank you pop-up container */
+
+.thank-you-popup {
+
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+}
+
+/* Style for the thank you message */
+
+.thank-you-message {
+
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style for faq section */
+
+.faq{
+
+ 
+  top: -112px;
+  margin-bottom: 20px;
+
+  position: relative;
+
+  margin-top: 30px;
+
+  padding-bottom: 0px;
+
+  border-bottom: thin dotted #d4d4d4;
+
+ 
+
+}
+
+h6{
+
+  top: -78px;
+
+  position: relative;
+
+  font-size: 25px;
+
+  color: #04AA6D;
+
+  text-decoration: underline;
+
+  text-shadow: #0e0d0d;
+
+}
+
+ 
+
+.faq .question{
+
+ 
+
+  cursor: pointer;
+
+ 
+
+  font-size: 18px;
+
+ 
+
+}
+
+ 
+
+.faq .question::after{
+
+ 
+
+  content: "\2304";
+
+ 
+
+  display: inline-block;
+
+ 
+
+  position: absolute;
+
+ 
+
+  transform: translateY(-10px);
+
+ 
+
+  right: 0;
+
+ 
+
+  font-size: 20px;
+
+ 
+
+  transition: transform .2s ease;
+
+ 
+
+  color: #999;
+
+ 
+
+}
+
+ 
+
+.faq .question.active::after{
+
+ 
+
+  transform: translateY(0px) rotate(-180deg);
+
+ 
+
+}
+
+ 
+
+.faq .answer{
+
+ 
+
+  max-height: 0;
+
+ 
+
+  transition: max-height .1s ease;
+
+ 
+
+  overflow: hidden;
+
+ 
+
+  padding-top: 10px;
+
+ 
+
+  padding-left: 10px;
+
+ 
+
+  line-height: 26px;
+
+ 
+
+  color: #666;
+
+ 
+
+}
+
+ 
+
+.faq .answer img{
+
+ 
+
+  width: 200px;
+
+ 
+
+  float: left;
+
+ 
+
+  padding-right: 20px;
+
+ 
+
+  display: inline-block;
+
+ 
+
+  margin-top: 10px;
+
+ 
+
+}
+
+ 
+
+.faq .answer ol{
+
+ 
+
+  padding-left: 20px;
+
+ 
+
+}
+
+ 
+
+.faq .answer ol li{
+
+ 
+
+  margin-bottom: 10px;
+
+ 
+
+}
+
+#google_translate_container {
+  width: 300px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  /* You can also set other CSS properties like margin, padding, etc. */
 }
